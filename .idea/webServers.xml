@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="be786920-fa20-4ba4-930e-32fbd70c7a04" name="test-server" url="http://my-server.powercode.pro">
+        <fileTransfer host="pro.powercode.pro" port="22" rootFolder="/home/misha_f/web/my-server.powercode.pro/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
