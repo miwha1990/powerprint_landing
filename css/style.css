@@ -27,27 +27,124 @@ h4 {
   font-size: 48px;
   margin-top: 0px; }
 
-.modal-login {
-  z-index: 99999;
-  position: absolute;
-  right: 120px;
-  top: -440px;
+.modal {
   color: black;
-  width: 330px;
+  top: 105px;
+  right: 155px;
+  left: auto;
+  width: 325px;
   height: 440px;
-  background: white;
-  border-radius: 10px;
+  max-height: none;
   -webkit-box-shadow: 0px 0px 15px 2px rgba(30, 30, 30, 0.3);
   -moz-box-shadow: 0px 0px 15px 2px rgba(30, 30, 30, 0.3);
   box-shadow: 0px 0px 15px 2px rgba(30, 30, 30, 0.3);
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
-  -ms-transition: all 0.7s;
-  -o-transition: all 0.7s;
-  transition: all 0.7s; }
+  border-radius: 10px; }
 
-.modal-appearing {
-  top: 20px !important; }
+.modal-content {
+  font-family: slab-regular;
+  padding: 24px 32px 0 !important; }
+  .modal-content h6 {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  .modal-content label {
+    color: black;
+    font-size: 16px;
+    margin: 10px 0; }
+  .modal-content form {
+    margin-bottom: 18px; }
+  .modal-content input[type="text"], .modal-content input[type="email"], .modal-content input[type="password"] {
+    margin-top: 8px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 1px solid #ddd !important;
+    height: 2rem; }
+    .modal-content input[type="text"].error, .modal-content input[type="email"].error, .modal-content input[type="password"].error {
+      border-color: red !important; }
+    .modal-content input[type="text"].valid, .modal-content input[type="email"].valid, .modal-content input[type="password"].valid {
+      border-color: #0095EB !important; }
+  .modal-content input[type="submit"] {
+    color: white;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #0095EB;
+    font-size: 0.9em;
+    min-width: 130px;
+    height: 36px;
+    line-height: 36px;
+    border: none;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+  .modal-content input[type="submit"]:hover {
+    background-color: #ffe63f;
+    color: black; }
+  .modal-content .registration {
+    margin-top: 17px;
+    font-size: 14px; }
+    .modal-content .registration a {
+      color: black;
+      text-decoration: underline; }
+  .modal-content p {
+    margin: 5px; }
+
+.modal-alerts {
+  z-index: 99999;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  transform: translateY(400px);
+  transition: all .6s;
+  color: white;
+  left: 0; }
+
+.rollup {
+  transform: translateY(10px) !important; }
+
+.reg-form {
+  height: 593px !important;
+  min-height: 593px !important; }
+
+.modal-footer {
+  padding: 15px !important;
+  position: absolute;
+  bottom: 0;
+  background-color: #EBFAFF !important;
+  height: auto !important; }
+  .modal-footer p {
+    font-size: 19px;
+    margin: 0; }
+  .modal-footer .socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .modal-footer .socials span {
+      position: relative;
+      background-color: #0095EB;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.4em;
+      margin: 2px 8px;
+      margin: 2px 8px; }
+      .modal-footer .socials span i {
+        vertical-align: middle;
+        line-height: 45px; }
+        .modal-footer .socials span i:before {
+          position: absolute; }
+      .modal-footer .socials span .fa-facebook:before {
+        top: 2px;
+        right: 16px; }
+      .modal-footer .socials span .fa-vk:before {
+        top: 1px;
+        right: 11px; }
+      .modal-footer .socials span .fa-google-plus:before {
+        top: 1px;
+        right: 7px; }
 
 .right-navigation {
   top: 50%;
@@ -832,10 +929,14 @@ MEDIA
     display: none; } }
 
 @media screen and (max-width: 1440px) and (min-width: 1025px) {
+  nav li {
+    margin: 0; }
   footer h2 {
     font-size: 48px; } }
 
 @media screen and (max-width: 1024px) and (min-width: 769px) {
+  .li-to-shop a {
+    padding: 0 15px; }
   footer .l3 {
     display: none; }
   #feedback form {
@@ -851,7 +952,12 @@ MEDIA
   .nav-wrapper ul li:first-child {
     display: none; } }
 
-@media screen and (max-width: 768px) and (min-width: 420px) {
+@media screen and (max-width: 768px) {
+  .site-logo img {
+    height: 32px;
+    width: auto; }
+  .float-panel {
+    z-index: 999; }
   .blue-circle {
     transform: translate(34%, 28px) scale(0.8); }
   .circle-transform {

@@ -119,14 +119,9 @@
                                 <div class="ua"><a href="#">Ua</a></div>
                             </div>
                             <div class="login">
-                                <span class="log"></span>
+                                <span class="log"  data-target="wrapper"></span>
                             </div>
-                            <div class="modal-login">
-                                <h1>Lorem ipsum.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eum natus, odit qui
-                                    reprehenderit saepe!</p>
-                                <span>close</span>
-                            </div>
+
                             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                         </div>
                     </nav>
@@ -458,8 +453,79 @@
                 </footer>
             </div>
         </div>
+        <!-- Modal Structure -->
+        <div id="wrapper" class="modal">
+            1
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h6 class="center-align">Авторизация</h6>
+                <form id="logform" action="http://localhost/reg.php">
+                    <div class="field-group">
+                        <label for="log-email">Электронная почта</label>
+                        <input type="email" id="log-email" name="email" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <p class="center-align"><input type="submit" value="Вход"></p>
+                </form>
+                <p class="center-align registration">Нет аккаунта? <a href="#!" id="register">Регистрация</a></p>
 
+            </div>
+            <div class="modal-footer">
+                <p class="center-align">Вход через соцсети:</p>
+                <div class="socials">
+                    <span class="facebook center-align"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                    <span class="vk center-align"><i class="fa fa-vk" aria-hidden="true"></i></span>
+                    <span class="google center-align"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h6 class="center-align">Регистрация</h6>
+                <form id="regform" action="http://localhost/reg.php">
+                    <div class="field-group">
+                        <label for="log-email-reg">Электронная почта</label>
+                        <input type="email" id="log-email-reg" name="email" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="name">Ваше имя и фамилия</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="password-reg">Пароль</label>
+                        <input type="password" id="password-reg" name="password" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="password-reg-repeat">Повторите пароль</label>
+                        <input type="password" id="password-reg-repeat" name="password-repeat" required>
+                    </div>
+                    <p class="center-align"><input type="submit" value="Регистрация"></p>
+                </form>
+                <p class="center-align registration">Уже есть аккаунт? <a href="#!" id="login">Вход</a></p>
 
+            </div>
+            <div class="modal-footer">
+                <p class="center-align">Вход через соцсети:</p>
+                <div class="socials">
+                    <span class="facebook center-align"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                    <span class="vk center-align"><i class="fa fa-vk" aria-hidden="true"></i></span>
+                    <span class="google center-align"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="row modal-alerts">
+            <div class="m12 s12 col">
+                <div class="card-panel deep-orange darken-1">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
