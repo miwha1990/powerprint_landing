@@ -194,10 +194,22 @@
             wrapperModal.delegate('form', "submit",  function(e) {
                 e.preventDefault();
                 var thisForm = $(this);
+                var tooltipSpan = '<span class="my-tooltip">Заполните это поле!</span>';
                 var name = thisForm.find('input[type="text"]');
                 var email = thisForm.find('input[type="email"]');
                 var password = thisForm.find('input[type="password"]');
-                var errors = [];
+                var errors = [], count = 1;
+                thisForm.find('input').map(function(i,e){
+                    if(!e.value){debugger;
+                        count === 1?$(e).addClass('error').parent().append(tooltipSpan):$(e).addClass('error');
+                        count++;
+                    }
+                });
+                if(thisForm.find('.my-tooltip').length){
+                    setTimeout(function(){
+                        thisForm.find('.my-tooltip').remove();
+                    }, 4000);
+                }
                 if(name.length){
                     if(name.val().length < 6 || name.val().length >40){
                         errors.push({'target':'name', 'message':'<strong>Имя</strong> должно быть от 5 до 40 символов.'});
@@ -236,7 +248,6 @@
                         data: thisForm.serialize(),
                         success: function(e){
                             debugger;
-
                         },
                         error: function(e){
                             debugger;
